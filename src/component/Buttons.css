@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Trebucent;
+    src: url('../font/trebuc.woff');
+}
+
+.buttons {
+    height: 100%;
+    background-color: rgb(179, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    >div {
+        display: flex;
+        align-items: center;
+        background-color: #2a4e97;
+        border-radius: 100vmax;
+        padding: 5px 24px;
+        gap: 7px;
+        box-shadow: 2px 2px 4px hsl(0, 0%, 44%);
+
+        img {
+            width: 28px;
+        }
+
+        >button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.26em;
+            padding: 0;
+
+        }
+
+    }
+
+    >div:active {
+        box-shadow: inset 4px 4px 1px #183a7e;
+        padding: 5px 24px 3px 24px;
+
+        img {
+            margin-top: 2px;
+        }
+
+        >button {
+            margin-top: 2px;
+        }
+    }
+
+    >div:nth-child(2) {
+        width: 200px;
+        height: 60px;
+
+        img {
+            width: 40px;
+        }
+
+        >button {
+            font-size: 1.85em;
+
+        }
+    }
+
+    .invisible {
+        display: none;
+    }
+}
