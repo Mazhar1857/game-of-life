@@ -1,15 +1,17 @@
-.play-board {
+.mobile-play-board {
     max-width: fit-content;
-    max-height: fit-content;
+    max-height: 100%;
     display: grid;
-    grid-template-columns: repeat(30, 1fr);
-    grid-template-rows: repeat(30, 1fr);
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(36, 1fr);
     background-color: rgb(190, 190, 190);
     gap: 1px;
+    overflow: auto;
+    scrollbar-width: none;
 
     >* {
         background-color: grey;
-        width: 13px;
+        width: 11px;
         aspect-ratio: 1;
     }
 
@@ -19,8 +21,9 @@
 
 }
 
-@media(max-width:450px) {
-    .play-board {
+@media(min-width:450px) {
+    .mobile-play-board {
         display: none;
     }
+
 }

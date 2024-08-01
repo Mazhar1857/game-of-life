@@ -4,6 +4,7 @@ import Header from './component/Header'
 import PlayBoard from './component/PlayBoard'
 import Buttons from './component/Buttons'
 import Explanation from './component/Explanation'
+import MobilePlayboard from './component/MobilePlayboad'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
 
       <section >
         <PlayBoard />
+        <MobilePlayboard />
         <Explanation />
       </section>
 

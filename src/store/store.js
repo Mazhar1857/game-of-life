@@ -3,6 +3,7 @@ import explanationSlice from "./explanationSlice";
 import startStopSlice from "./startStopSlice";
 import clearSlice from "./clearSlice";
 import arraySlice from "./arraySlice";
+import mobileArraySlice from "./mobileArraySlice";
 
 
 const store = configureStore({
@@ -10,7 +11,8 @@ const store = configureStore({
         explanation: explanationSlice.reducer,
         startStop: startStopSlice.reducer,
         clear: clearSlice.reducer,
-        array: arraySlice.reducer
+        array: arraySlice.reducer,
+        mobileArray: mobileArraySlice.reducer
     }
 })
 

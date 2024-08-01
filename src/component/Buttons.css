@@ -6,23 +6,18 @@
 .buttons {
     height: 100%;
     background-color: rgb(179, 179, 179);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+
 
     >div {
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: #2a4e97;
         border-radius: 100vmax;
-        padding: 5px 24px;
         gap: 7px;
         box-shadow: 2px 2px 4px hsl(0, 0%, 44%);
 
-        img {
-            width: 28px;
-        }
+
 
         >button {
             background: transparent;
@@ -30,14 +25,13 @@
             color: white;
             font-size: 1.26em;
             padding: 0;
-
         }
 
     }
 
     >div:active {
         box-shadow: inset 4px 4px 1px #183a7e;
-        padding: 5px 24px 3px 24px;
+        padding: 5px 0 3px;
 
         img {
             margin-top: 2px;
@@ -45,24 +39,117 @@
 
         >button {
             margin-top: 2px;
-        }
-    }
-
-    >div:nth-child(2) {
-        width: 200px;
-        height: 60px;
-
-        img {
-            width: 40px;
-        }
-
-        >button {
-            font-size: 1.85em;
-
         }
     }
 
     .invisible {
         display: none;
+    }
+}
+
+@media(min-width:450px) {
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        >.exp {
+            width: 220px;
+            height: 40px;
+
+            img {
+                width: 28px;
+            }
+
+            >button {
+                font-size: 1.26rem;
+            }
+        }
+
+        >.start {
+            width: 200px;
+            height: 60px;
+
+            img {
+                width: 40px;
+            }
+
+            >button {
+                font-size: 1.85rem;
+            }
+
+        }
+
+        >.clear {
+            width: 150px;
+            height: 40px;
+
+            img {
+                width: 28px;
+            }
+
+            >button {
+                font-size: 1.26rem;
+            }
+
+        }
+
+    }
+}
+
+@media(max-width:450px) {
+    .buttons {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'start clear'
+            'exp exp';
+
+
+        justify-items: center;
+        align-items: center;
+
+        .exp {
+            grid-area: exp;
+            width: 220px;
+            height: 55px;
+
+            img {
+                width: 28px;
+            }
+
+            >button {
+                font-size: 1.26rem;
+            }
+
+        }
+
+        .start {
+            grid-area: start;
+        }
+
+        .clear {
+            grid-area: clear;
+        }
+
+        .start,
+        .clear {
+            width: 160px;
+            height: 55px;
+
+            img {
+                width: 28px;
+            }
+
+            >button {
+                font-size: 1.26rem;
+            }
+
+        }
+
+
+
+
     }
 }

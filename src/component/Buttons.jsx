@@ -11,9 +11,11 @@ import { explanationAction } from '../store/explanationSlice'
 import { startStopAction } from '../store/startStopSlice'
 import { clearAction } from '../store/clearSlice'
 import { arrayAction } from '../store/arraySlice'
+import { mobileArrayAction } from '../store/mobileArraySlice'
 
 const Buttons = () => {
     const startStopBtn = useSelector(state => state.startStop)
+    const mobileArray = useSelector(state => state.mobileArray)
     const array = useSelector(state => state.array)
     const clearBtn = useSelector(state => state.clear)
     const explanations = useSelector(state => state.explanation)
@@ -32,7 +34,15 @@ const Buttons = () => {
             })
         })
 
+        const newMobileArray = mobileArray.map(row => row.map(col => ({ ...col })))
+        mobileArray.forEach((row, rowInd) => {
+            row.forEach((col, colInd) => {
+                newMobileArray[rowInd][colInd].s = false;
+            })
+        })
+
         dispatch(arrayAction.setArray(newArray))
+        dispatch(mobileArrayAction.setMobileArray(newMobileArray))
         dispatch(clearAction.toggleclearRest())
     }
 
@@ -47,30 +57,43 @@ const Buttons = () => {
         })
 
         defLive.forEach(item => {
-
             newArray[item[0]][item[1]].s = true;
-
         })
+
+        const newMobileArray = mobileArray.map(row => row.map(col => ({ ...col })))
+        newMobileArray.forEach((row, rowInd) => {
+            row.forEach((col, colInd) => {
+                newMobileArray[rowInd][colInd].s = false;
+            })
+        })
+
+        defLive.forEach(item => {
+            newMobileArray[item[0]][item[1]].s = true;
+        })
+
+
+
         dispatch(arrayAction.setArray(newArray));
-        dispatch(clearAction.toggleclearRest())
+        dispatch(mobileArrayAction.setMobileArray(newMobileArray));
+        dispatch(clearAction.toggleclearRest());
     }
 
     return (
         <div className='buttons'>
-            <div onClick={handleExplanation}>
+            <div onClick={handleExplanation} className='exp'>
                 <img src={explanation} alt="" />
                 <button>EXPLANATION</button>
             </div>
-            <div onClick={() => dispatch(startStopAction.toggleStartStop())}>
+            <div onClick={() => dispatch(startStopAction.toggleStartStop())} className='start'>
                 <img className={startStopBtn === 'stop' ? 'invisible' : ''} src={play} alt="" />
                 <img className={startStopBtn === 'start' ? 'invisible' : ''} src={stop} alt="" />
                 <button>{startStopBtn.toUpperCase()}</button>
             </div>
-            <div className={clearBtn === 'reset' ? 'invisible' : ''} onClick={handleClear}>
+            <div className={`${clearBtn === 'reset' ? 'invisible' : ''} clear`} onClick={handleClear}>
                 <img src={clear} alt="" />
                 <button>CLEAR</button>
             </div>
-            <div className={clearBtn === 'clear' ? 'invisible' : ''} onClick={handleReset}>
+            <div className={`${clearBtn === 'clear' ? 'invisible' : ''} clear`} onClick={handleReset}>
                 <img src={reset} alt="" />
                 <button >RESET</button>
             </div>
