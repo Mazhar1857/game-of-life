@@ -69,12 +69,12 @@ const Explanation = () => {
                     <p>Video’s about the Game of Life</p>
                     <div className='videos'>
                         <div>
-                            <iframe width="279" height="210" src="https://www.youtube.com/embed/CgOcEZinQ2I?si=M--yck-90miOXDOS" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/CgOcEZinQ2I?si=M--yck-90miOXDOS" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             <p>The rules are explained in Stephen Hawkings’ documentary The Meaning of Life</p>
                         </div>
 
                         <div>
-                            <iframe width="279" height="210" src="https://www.youtube.com/embed/R9Plq-D1gEk?si=fqsT1YKmH_8ZRUhr" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/R9Plq-D1gEk?si=fqsT1YKmH_8ZRUhr" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             <p>John Conway himself talks about the Game of Life</p>
                         </div>
                     </div>

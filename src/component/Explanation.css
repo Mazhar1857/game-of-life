@@ -12,8 +12,6 @@
 
 .explanation>div {
     position: absolute;
-    width: 71%;
-    height: 92%;
     z-index: 10;
     background-color: white;
     overflow: auto;
@@ -22,7 +20,7 @@
         position: sticky;
         width: 100%;
         top: 0;
-        padding: 15px;
+
         background-color: white;
         display: flex;
         justify-content: end;
@@ -31,73 +29,30 @@
 
     .button>button {
         position: sticky;
-        width: 67px;
-        height: 37px;
+
         border-radius: 100vmax;
         border: none;
         background-color: #2a4e97;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 2px 2px 4px hsl(0, 0%, 44%);
-
-        img {
-            width: 28px;
-        }
-    }
-
-    .button>button:active {
-        box-shadow: inset 4px 4px 1px #183a7e;
-
-        img {
-            margin-top: 2px;
-        }
-
-        >button {
-            margin-top: 2px;
-        }
 
     }
-}
 
-.explanation .container {
-    margin-inline: 30px;
-}
-
-.explanation>div>.heading {
-    margin-top: 20px;
-
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        margin: 20px 0;
-    }
 
 }
 
 
 .explanation>div>.rules {
-    margin-block: 25px;
-    padding: 25px 20px 0;
+
     border: 1px solid rgb(134, 133, 133);
     border-radius: 5px;
 
-    h2 {
-        font-size: 1.2em;
-    }
-
-    h3 {
-        font-size: 1em;
-    }
-
     >div {
-        margin: 20px 0;
+
         width: 100%;
         display: grid;
-        grid-template-columns: 74% 26%;
-        grid-template-rows: auto;
+
 
     }
 }
@@ -112,31 +67,10 @@
 }
 
 .more-information {
-    margin-bottom: 50px;
-
-    >h2 {
-        font-size: 1.2em;
-        margin-block: 25px;
-    }
-
-    >p {
-        margin-block: 20px;
-    }
 
     .videos {
         display: flex;
-        width: 77.5%;
         margin-inline: auto;
-        justify-content: space-between;
-
-        iframe {
-            margin-bottom: 8px;
-            box-shadow: 5px 5px 5px rgb(167, 167, 167);
-        }
-
-        >div {
-            width: 279px;
-        }
 
         >div>p {
             font-size: 0.8em;
@@ -178,4 +112,210 @@
 
 .model-open {
     overflow: hidden;
+}
+
+@media(min-width:450px) {
+    .explanation>div {
+        width: 71%;
+        height: 92%;
+
+        .button {
+            padding: 15px;
+        }
+
+        .button>button {
+            width: 67px;
+            height: 37px;
+            box-shadow: 2px 2px 4px hsl(0, 0%, 44%);
+
+            img {
+                width: 28px;
+            }
+
+        }
+
+        .button>button:active {
+            box-shadow: inset 4px 4px 1px #183a7e;
+
+            img {
+                margin-top: 2px;
+            }
+
+            >button {
+                margin-top: 2px;
+            }
+
+        }
+    }
+
+    .explanation .container {
+        margin-inline: 30px;
+    }
+
+    .explanation>div>.heading {
+        margin-top: 20px;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+    }
+
+    .explanation>div>.rules {
+        margin-block: 25px;
+        padding: 25px 20px 0;
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        >div {
+            margin: 20px 0;
+            grid-template-columns: 74% 26%;
+            grid-template-rows: auto;
+        }
+    }
+
+    .more-information {
+        margin-bottom: 50px;
+
+        >h2 {
+            font-size: 1.2em;
+            margin-block: 25px;
+        }
+
+        >p {
+            margin-block: 20px;
+        }
+
+        .videos {
+            width: 77.5%;
+            justify-content: space-between;
+
+            iframe {
+                width: 279px;
+                height: 210px;
+                margin-bottom: 8px;
+                box-shadow: 5px 5px 5px rgb(167, 167, 167);
+            }
+
+            >div {
+                width: 279px;
+            }
+
+        }
+    }
+}
+
+@media(max-width:450px) {
+
+    .explanation>div {
+        width: 100%;
+        height: 92%;
+
+        .button {
+            padding: 15px;
+        }
+
+        .button>button {
+            width: 60px;
+            height: 30px;
+            box-shadow: 2px 2px 4px hsl(0, 0%, 44%);
+
+            img {
+                width: 21px;
+            }
+
+        }
+
+        .button>button:active {
+            box-shadow: inset 4px 4px 1px #183a7e;
+
+            img {
+                margin-top: 2px;
+            }
+
+            >button {
+                margin-top: 2px;
+            }
+
+        }
+    }
+
+    .explanation .container {
+        margin-inline: 15px;
+    }
+
+    .explanation>div>.heading {
+        margin-top: 20px;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+    }
+
+    .explanation>div>.rules {
+        margin-block: 25px;
+        padding: 25px 10px 0;
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        >div {
+            margin: 20px 0;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+    }
+
+    .more-information {
+        margin-bottom: 50px;
+
+        >h2 {
+            font-size: 1.2em;
+        }
+
+        >p {
+            margin-block: 20px;
+        }
+
+        .videos {
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            iframe {
+                width: 279px;
+                height: 210px;
+                margin-bottom: 8px;
+                box-shadow: 5px 5px 5px rgb(167, 167, 167);
+            }
+
+            >div {
+                width: 279px;
+            }
+
+        }
+    }
+
 }
